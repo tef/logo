@@ -24,7 +24,7 @@ examples:
 <a href="/8kpcBaQu">spiral</a>
 </h2>
 {% if hash %}
-<h4>share this program: <a href="http://logo.twentygototen.org/{{hash|escape}}">link to it</a><br />
+<h4>share this program: <a href="/{{hash|escape}}">link to it</a><br />
 html: <input readonly="readonly" id="htmlsnippet" value="&lt;a href=&quot;http://logo.twentygototen.org/{{hash|escape}}&quot;&gt;&lt;img src=&quot;http://logo.twentygototen.org/{{hash}}.png&quot;/&gt;&lt;br/&gt;Run at logo.twentygototen.org&lt;/a&gt;" /><br />
 bbcode: <input readonly="readonly" id="bbcode" value="[url=http://logo.twentygototen.org/{{hash}}][img]http://logo.twentygototen.org/{{hash}}.png[/img]Run at logo.twentygototen.org[/url]" />
 </h4>
@@ -52,7 +52,7 @@ bbcode: <input readonly="readonly" id="bbcode" value="[url=http://logo.twentygot
     <div class="inner">
         <div id="textOutput"></div>
         <div id="turtle">
-        <embed width="20" height="20" id='sprite' src="/static/turtle.svg"/>
+        <img width="20" height="20" id='sprite' src="/static/turtle.svg"/>
         </div>
         <canvas id="canvas" width="500" height="500">
     Your browser doesn't support canvas tags. Please upgrade to a recent version of Firefox or Opera.

@@ -123,7 +123,7 @@ Logo.prototype.setup = function () {
 
     this.addCommand('setpos',1,null, function (b) { 
         if (b && b.length == 1 && b[0].length == 2 ) {
-			var a = b[0];
+            var a = b[0];
             if (parseInt(a[0]) != a[0]) return new Token('error','When using setpos, you can only set x to a whole number, not '+a[0])
             if (parseInt(a[1]) != a[1]) return new Token('error','When using setpos, you can only set y to a whole number, not '+a[1])
             this.turtle.setxy(a[0],a[1]);
@@ -132,25 +132,25 @@ Logo.prototype.setup = function () {
         }
     });
 
-	this.addCommand('print',1,['pr'], function (b) { 
+    this.addCommand('print',1,['pr'], function (b) { 
         if (b && b.length) {
-		   var a, sep;
-		   if (b[0].constructor == Array) {
-				a = b[0];
-				sep = " ";
-		   } else {
-				a = b;
-				sep = '';
-		   }
-		   var txt = "";
-		   for (var i=0; (i < a.length); i++) txt += a[i] + sep;
-		   this.textOutput.innerHTML = this.textOutput.innerHTML + "<div>" + txt + "</div>";
+           var a, sep;
+           if (b[0].constructor == Array) {
+                a = b[0];
+                sep = " ";
+           } else {
+                a = b;
+                sep = '';
+           }
+           var txt = "";
+           for (var i=0; (i < a.length); i++) txt += a[i] + sep;
+           this.textOutput.innerHTML = this.textOutput.innerHTML + "<div>" + txt + "</div>";
         } else {
             return new Token('error','You can pass print a list of arguments or a single word, not '+b[0]);
         }
     });
-	
-	this.addCommand('cleartext', 0, ['ct'], function () { 
+    
+    this.addCommand('cleartext', 0, ['ct'], function () { 
         this.textOutput.innerHTML = "";        
     });
 

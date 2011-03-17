@@ -89,6 +89,11 @@ Turtle.prototype.update = function() {
         this.turtle.style.left = parseInt(this._left + this.x -10) + "px";
         this.turtle.style.top = parseInt(this._top + this.y-20) + "px";
         this.sprite.setAttribute('transform','rotate('+(this.angle)+' 10 10)');
+
+        //Browser specific transform styles.
+        this.sprite.style['-webkit-transform'] = 'rotate(' + this.angle + 'deg)';
+        this.sprite.style['MozTransform'] = 'rotate(' + this.angle + 'deg)';
+        this.sprite.style['-o-transform'] = 'rotate(' + this.angle + 'deg)';
     } else {
         this.turtle.style.left = "-10px";
         this.turtle.style.top = "-10px";

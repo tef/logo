@@ -60,19 +60,19 @@ body{
 }
 
 #textOutput {
-	margin: 10px 0 10px 0;
-	position: absolute;
-	font-size: 20px;
-	background-color: transparent;
+    margin: 10px 0 10px 0;
+    position: absolute;
+    font-size: 20px;
+    background-color: transparent;
 }
 
 #turtle  {
-	margin: 10px 0 10px 0;
+    margin: 10px 0 10px 0;
     height: 20px;
     width: 20px;
-	position: absolute;
-	font-size: 20px;
-	background-color: transparent;
+    position: absolute;
+    font-size: 20px;
+    background-color: transparent;
 }
 #notes {
     clear: left;

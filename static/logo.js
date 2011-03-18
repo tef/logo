@@ -176,7 +176,7 @@ Logo.prototype.setup = function () {
     
     
     this.addCommand('color',1,['colour'], function (a) { 
-        if (a[0].length != 3 ) return new Token('error','When using color, pass it a list like [r g b], not '+a[0])
+        if (a[0].length < 3 || a[0].length > 4 ) return new Token('error','When using color, pass it a list like [r g b], not '+a[0])
 
         this.turtle.color(a[0]);
     });

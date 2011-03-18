@@ -47,22 +47,23 @@ ST
 
 Drawing:
 
-CLEARSCREEN     Clear the screen
+CLEARSCREEN       Clear the screen
 CLEAR
 CS
 
-CIRCLE r        Draw a Circle of radius r around the turtle
+CIRCLE r          Draw a Circle of radius r around the turtle
 
-ARC r d         Draw an arc of radius r for d degrees
+ARC r d           Draw an arc of radius r for d degrees
 
-PENUP           Lift the pen up and down
+PENUP             Lift the pen up and down
 PU
 PENDOWN
 PD
 
-COLOR [r g b]   Set the pen color
+COLOR [r g b]     Set the pen color.  r, g and b are integers from 0 to 255, 
+COLOR [r g b a]   a is a float from 0 to 1.
 
-PENWIDTH w      Set the pen width
+PENWIDTH w        Set the pen width
 
 
 Text:

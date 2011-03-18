@@ -144,7 +144,12 @@ Turtle.prototype.color = function (args) {
     this.color_(args)
 }
 Turtle.prototype.color_ = function (args) {
-    this.c.strokeStyle = "rgb("+parseInt(args[0])+","+parseInt(args[1])+","+parseInt(args[2])+")";
+    if (args.length == 3) {
+      this.c.strokeStyle = "rgb("+parseInt(args[0])+","+parseInt(args[1])+","+parseInt(args[2])+")";
+    }
+    else if (args.length == 4) {
+      this.c.strokeStyle = "rgba("+parseInt(args[0])+","+parseInt(args[1])+","+parseInt(args[2])+","+parseFloat(args[3])+")";
+    }
 }
 
 Turtle.prototype.arc = function (radius, angle) {

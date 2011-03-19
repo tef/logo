@@ -46,11 +46,11 @@ function run(speed, drawbits) {
         logo.setTurtle(newturtle);
         turtle = newturtle;
     }
-  
-    oldcode.innerHTML += "\n" + form.code.value;
+    var codeText = getPlainCode();
+    oldcode.innerHTML += "\n" + codeText;
     //form.code.value = ""
   
-    out = logo.run(form.code.value);
+    out = logo.run(codeText);
             
     if (out && out.type === "error") {
         alert(out.data);
